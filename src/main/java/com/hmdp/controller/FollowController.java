@@ -12,8 +12,8 @@ import javax.annotation.Resource;
  *  前端控制器
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * @author steven
+ * @since 2023-04-09
  */
 @RestController
 @RequestMapping("/follow")
@@ -30,5 +30,10 @@ public class FollowController {
     @GetMapping("/or/not/{id}")
     public Result isFollow(@PathVariable("id") Long followUserId){
         return followService.isFollow(followUserId);
+    }
+
+    @GetMapping("/common/{id}")
+    public Result followCommons(@PathVariable("id")Long id){
+        return followService.followCommons(id);
     }
 }

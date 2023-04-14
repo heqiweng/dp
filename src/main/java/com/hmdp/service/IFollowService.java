@@ -9,12 +9,14 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *  服务类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * @author steven
+ * @since 2023-04-09
  */
 public interface IFollowService extends IService<Follow> {
 
     Result follow(Long followUserId, Boolean isFollow);
 
     Result isFollow(Long followUserId);
+
+    Result followCommons(Long id);
 }
